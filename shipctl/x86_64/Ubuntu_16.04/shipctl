@@ -10,7 +10,7 @@ fi
 
 execute_shipctl_command() {
   if type $1 &> /dev/null; then
-    "$@"
+    source "$@"
   else
     echo "The command $1 is not supported on this image."
     exit 99

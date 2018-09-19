@@ -74,6 +74,10 @@ shippable_jdk() {
   java -version
 }
 
+export_envs() {
+  echo "JAVA_HOME=$JAVA_HOME"
+}
+
 if [ "$JDK_VERSION" == "" ] || [ "$service_action" == "" ]; then
   echo "Usage: shippable_jdk set openjdk9"
   exit 1
@@ -86,3 +90,4 @@ if  [ "$service_action" != "set" ]; then
 fi
 
 shippable_jdk
+export_envs
