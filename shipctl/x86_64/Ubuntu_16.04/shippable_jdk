@@ -90,4 +90,4 @@ if  [ "$service_action" != "set" ]; then
 fi
 
 shippable_jdk
-export_envs
+#export_envs
